@@ -11,9 +11,6 @@ import org.norsh.security.Hasher;
 import org.norsh.util.Converter;
 import org.norsh.util.Strings;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * Data Transfer Object (DTO) for creating an Element.
  * <p>
@@ -37,8 +34,6 @@ import lombok.Setter;
  * @see ElementType
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
-@Getter
-@Setter
 public class ElementCreateDto extends CryptoSignedAbstractDto {
     /** Type of the Element. Cannot be null and must correspond to a valid {@link ElementType}. */
     private ElementType type;
@@ -119,4 +114,46 @@ public class ElementCreateDto extends CryptoSignedAbstractDto {
             super.setRequestId(this.getHash());
         }
     }
+
+	public ElementType getType() {
+		return type;
+	}
+
+	public void setType(ElementType type) {
+		this.type = type;
+	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+	}
+
+	public Integer getDecimals() {
+		return decimals;
+	}
+
+	public void setDecimals(Integer decimals) {
+		this.decimals = decimals;
+	}
+
+	public Long getInitialSupply() {
+		return initialSupply;
+	}
+
+	public void setInitialSupply(Long initialSupply) {
+		this.initialSupply = initialSupply;
+	}
+
+	public String getTfo() {
+		return tfo;
+	}
+
+	public void setTfo(String tfo) {
+		this.tfo = tfo;
+	}
+    
+    
 }

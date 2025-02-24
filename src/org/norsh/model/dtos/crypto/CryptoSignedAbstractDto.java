@@ -4,9 +4,6 @@ import org.norsh.exceptions.OperationException;
 import org.norsh.model.dtos.DistributedDto;
 import org.norsh.util.Converter;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * Abstract DTO for cryptographically signed requests.
  * <p>
@@ -26,8 +23,7 @@ import lombok.Setter;
  * @author Danthur Lice
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
-@Getter
-@Setter
+
 public class CryptoSignedAbstractDto extends DistributedDto {
 	/** Computed hash for validation. */
     private String hash;
@@ -64,4 +60,30 @@ public class CryptoSignedAbstractDto extends DistributedDto {
 //            throw new OperationException("Invalid signature: The provided signature does not match the computed hash from the given public key.");
 //        }
     }
+
+	public String getHash() {
+		return hash;
+	}
+
+	public void setHash(String hash) {
+		this.hash = hash;
+	}
+
+	public String getSignature() {
+		return signature;
+	}
+
+	public void setSignature(String signature) {
+		this.signature = signature;
+	}
+
+	public String getPublicKey() {
+		return publicKey;
+	}
+
+	public void setPublicKey(String publicKey) {
+		this.publicKey = publicKey;
+	}
+    
+    
 }

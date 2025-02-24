@@ -3,9 +3,6 @@ package org.norsh.model.dtos.elements;
 import org.norsh.model.dtos.crypto.CryptoSignedAbstractDto;
 import org.norsh.model.dtos.transactions.TransactionCreateDto;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * DTO representing metadata for a Smart Element with cryptographic validation.
  * <p>
@@ -36,8 +33,6 @@ import lombok.Setter;
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
 
-@Getter
-@Setter
 public class ElementMetadataDto extends CryptoSignedAbstractDto {
 	/** Id of the Smart Element. */
 	private String id;
@@ -58,6 +53,62 @@ public class ElementMetadataDto extends CryptoSignedAbstractDto {
 	private String policy;
 	
 	private TransactionCreateDto transaction;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLogo() {
+		return logo;
+	}
+
+	public void setLogo(String logo) {
+		this.logo = logo;
+	}
+
+	public String getAbout() {
+		return about;
+	}
+
+	public void setAbout(String about) {
+		this.about = about;
+	}
+
+	public String getSite() {
+		return site;
+	}
+
+	public void setSite(String site) {
+		this.site = site;
+	}
+
+	public String getPolicy() {
+		return policy;
+	}
+
+	public void setPolicy(String policy) {
+		this.policy = policy;
+	}
+
+	public TransactionCreateDto getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(TransactionCreateDto transaction) {
+		this.transaction = transaction;
+	}
 
 //	/**
 //	 * Validates the fields of the ElementMetadataDto based on predefined business rules.
@@ -161,6 +212,7 @@ public class ElementMetadataDto extends CryptoSignedAbstractDto {
 //        super.validate(details);
 //        transaction.validate();
 //	}
+	
 	
 	
 }

@@ -34,12 +34,6 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.36</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.norsh</groupId>
 			<artifactId>common</artifactId>
 			<version>1.0.0</version>

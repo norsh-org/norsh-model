@@ -7,11 +7,6 @@ import org.norsh.constants.Constants;
 import org.norsh.model.dtos.DistributedDto;
 import org.norsh.model.types.ElementType;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 /**
  * DTO for creating an Element.
  * <p>
@@ -45,10 +40,6 @@ import lombok.Setter;
  * @see ElementType
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class TransactionGetDto extends DistributedDto {
 	private String id;
 
@@ -63,4 +54,11 @@ public class TransactionGetDto extends DistributedDto {
 		
 	}
 
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
 }

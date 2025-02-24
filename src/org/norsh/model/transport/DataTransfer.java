@@ -5,11 +5,6 @@ import org.norsh.exceptions.OperationStatus;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 /**
  * DTO representing the status of a request in the Norsh ecosystem.
  * <p>
@@ -27,10 +22,6 @@ import lombok.Setter;
  * @version 1.0.0
  * @author Danthur Lice
  */
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @JsonInclude(Include.NON_NULL)
 public class DataTransfer {
 	/** Unique identifier of the request. */
@@ -76,5 +67,61 @@ public class DataTransfer {
 		this.requestId = requestId;
 		this.status = status;
 		this.responseData = responseData;
+	}
+
+	public String getRequestId() {
+		return requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
+
+	public RestMethod getMethod() {
+		return method;
+	}
+
+	public void setMethod(RestMethod method) {
+		this.method = method;
+	}
+
+	public String getRequestClassName() {
+		return requestClassName;
+	}
+
+	public void setRequestClassName(String requestClassName) {
+		this.requestClassName = requestClassName;
+	}
+
+	public Object getRequestData() {
+		return requestData;
+	}
+
+	public void setRequestData(Object requestData) {
+		this.requestData = requestData;
+	}
+
+	public Object getResponseData() {
+		return responseData;
+	}
+
+	public void setResponseData(Object responseData) {
+		this.responseData = responseData;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public OperationStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(OperationStatus status) {
+		this.status = status;
 	}
 }

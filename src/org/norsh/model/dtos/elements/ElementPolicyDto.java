@@ -3,9 +3,6 @@ package org.norsh.model.dtos.elements;
 import org.norsh.model.dtos.crypto.CryptoSignedAbstractDto;
 import org.norsh.model.dtos.transactions.TransactionCreateDto;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * DTO representing the policy configuration for a Smart Element.
  * <p>
@@ -38,8 +35,6 @@ import lombok.Setter;
  * @author Danthur Lice
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
-@Getter
-@Setter
 public class ElementPolicyDto extends CryptoSignedAbstractDto {
     
     /**
@@ -79,6 +74,48 @@ public class ElementPolicyDto extends CryptoSignedAbstractDto {
     private String script;
     
     private TransactionCreateDto transaction;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Double getTransactionTax() {
+		return transactionTax;
+	}
+
+	public void setTransactionTax(Double transactionTax) {
+		this.transactionTax = transactionTax;
+	}
+
+	public Integer getFreezeDuration() {
+		return freezeDuration;
+	}
+
+	public void setFreezeDuration(Integer freezeDuration) {
+		this.freezeDuration = freezeDuration;
+	}
+
+	public String getScript() {
+		return script;
+	}
+
+	public void setScript(String script) {
+		this.script = script;
+	}
+
+	public TransactionCreateDto getTransaction() {
+		return transaction;
+	}
+
+	public void setTransaction(TransactionCreateDto transaction) {
+		this.transaction = transaction;
+	}
+    
+    
 
 //    /**
 //     * Validates the policy attributes according to predefined business rules.
