@@ -1,10 +1,7 @@
 package org.norsh.model.dtos.crypto;
 
-import java.util.regex.Pattern;
-
 import org.norsh.exceptions.OperationException;
 import org.norsh.model.dtos.DistributedDto;
-import org.norsh.security.Signature;
 import org.norsh.util.Converter;
 
 import lombok.Getter;
