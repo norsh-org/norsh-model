@@ -4,6 +4,9 @@ import org.norsh.model.dtos.crypto.CryptoSignedAbstractDto;
 import org.norsh.model.dtos.transactions.TransactionCreateDto;
 import org.norsh.model.types.Networks;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * DTO for registering external network addresses in a Smart Element proxy.
  * <p>
@@ -42,7 +45,8 @@ import org.norsh.model.types.Networks;
  * @see CryptoSignedAbstractDto
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
-
+@Getter
+@Setter
 public class ElementNetworkDto extends CryptoSignedAbstractDto {
     /** The unique identifier (hash) of the Smart Element. */
     private String id;
@@ -54,38 +58,6 @@ public class ElementNetworkDto extends CryptoSignedAbstractDto {
     private String address;
 
     private TransactionCreateDto transaction;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public Networks getNetwork() {
-		return network;
-	}
-
-	public void setNetwork(Networks network) {
-		this.network = network;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public TransactionCreateDto getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(TransactionCreateDto transaction) {
-		this.transaction = transaction;
-	}
     
 //    /**
 //     * Validates the fields of the {@link ElementNetworkDto} based on predefined business rules.
@@ -148,6 +120,4 @@ public class ElementNetworkDto extends CryptoSignedAbstractDto {
 //        super.validate(details);
 //        transaction.validate();
 //	}
-    
-    
 }

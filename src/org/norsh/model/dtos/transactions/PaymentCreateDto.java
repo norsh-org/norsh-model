@@ -9,6 +9,9 @@ import org.norsh.model.dtos.crypto.CryptoSignedAbstractDto;
 import org.norsh.security.Hasher;
 import org.norsh.util.Strings;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * DTO for creating a payment transaction.
  * <p>
@@ -27,7 +30,8 @@ import org.norsh.util.Strings;
  * @since 1.0.0
  * @version 1.0.0
  */
-
+@Getter
+@Setter
 public class PaymentCreateDto extends CryptoSignedAbstractDto {
 	private String to; // Recipient's identifier
 	private String element; // Smart Element
@@ -63,46 +67,4 @@ public class PaymentCreateDto extends CryptoSignedAbstractDto {
 		if (getRequestId() == null)
 			setRequestId(getHash());
 	}
-
-	public String getTo() {
-		return to;
-	}
-
-	public void setTo(String to) {
-		this.to = to;
-	}
-
-	public String getElement() {
-		return element;
-	}
-
-	public void setElement(String element) {
-		this.element = element;
-	}
-
-	public BigDecimal getVolume() {
-		return volume;
-	}
-
-	public void setVolume(BigDecimal volume) {
-		this.volume = volume;
-	}
-
-	public String getLink() {
-		return link;
-	}
-
-	public void setLink(String link) {
-		this.link = link;
-	}
-
-	public Long getNonce() {
-		return nonce;
-	}
-
-	public void setNonce(Long nonce) {
-		this.nonce = nonce;
-	}
-	
-	
 }

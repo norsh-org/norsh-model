@@ -2,6 +2,9 @@ package org.norsh.model.dtos;
 
 import org.norsh.exceptions.OperationException;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Abstract DTO for message serialization and identification in distributed systems.
  * <p>
@@ -26,16 +29,13 @@ import org.norsh.exceptions.OperationException;
  * @author Danthur Lice
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
+
+@Getter
+@Setter
 public class DistributedDto {
 	private String requestId;
 	
 	public void validate() throws OperationException {}
 	
-	public String getRequestId() {
-		return requestId;
-	}
 	
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
 }

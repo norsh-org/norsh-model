@@ -1,5 +1,8 @@
 package org.norsh.model.dtos.crypto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Represents the request body for the "Get Address" API.
  * <p>
@@ -25,17 +28,11 @@ package org.norsh.model.dtos.crypto;
  * @see <a href="https://docs.norsh.org">Norsh Documentation</a>
  */
 
+@Getter
+@Setter
 public class AddressApiV1GenerateDto {
     /**
      * The Base64 or Hexadecimal encoded public key used for address generation.
      */
     private String publicKey;
-    
-    public String getPublicKey() {
-		return publicKey;
-	}
-    
-    public void setPublicKey(String publicKey) {
-		this.publicKey = publicKey;
-	}
 }
