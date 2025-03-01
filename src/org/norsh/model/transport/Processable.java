@@ -6,6 +6,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import org.norsh.rest.RestMethod;
+
 /**
  * Annotation for marking service methods that process specific DTOs.
  * <p>

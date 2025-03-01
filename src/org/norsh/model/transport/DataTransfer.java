@@ -1,6 +1,7 @@
 package org.norsh.model.transport;
 
 import org.norsh.exceptions.OperationStatus;
+import org.norsh.rest.RestMethod;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
