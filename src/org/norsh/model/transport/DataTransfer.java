@@ -65,7 +65,7 @@ public class DataTransfer {
 		this.method = method;
 		this.requestData = requestData;
 		this.requestClassName = requestData.getClass().getCanonicalName();
-		this.status = OperationStatus.CREATED;
+		this.status = OperationStatus.PROCESSING;
 	}
 
 	public DataTransfer(String requestId, OperationStatus status) {
