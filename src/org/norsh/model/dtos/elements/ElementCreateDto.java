@@ -108,8 +108,12 @@ public class ElementCreateDto extends CryptoSignedAbstractDto {
         // Validate Public Key using parent method
         super.validatePublicKey();
 
-        // Generate hash for integrity verification using symbol, decimals, supply, TFO data, and public key
-        this.setHash(Hasher.sha256Hex(Strings.concatenate(symbol, decimals, initialSupply, tfo, getPublicKey())));
+        // Generate hash for integrity verification using symbol, decimals, initialSupply if token, TFO data, and public key
+
+        if (type == ElementType.TOKEN)
+        	this.setHash(Hasher.sha256Hex(Strings.concatenate(symbol, decimals, initialSupply, tfo, getPublicKey())));
+        else if (type == ElementType.PROXY) 
+            this.setHash(Hasher.sha256Hex(Strings.concatenate(symbol, decimals, tfo, getPublicKey())));
         
         // Validate signature using parent method
         super.validateSignature();
